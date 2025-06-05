@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+                <?import javafx.scene.control.*?>
+                <?import javafx.scene.layout.*?>
+                <?import javafx.scene.image.*?>
+                <?import javafx.scene.text.*?>
+
+                <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="ejercicio.controllers.PrincipalController">
+                    <top>
+                        <HBox styleClass="header" spacing="10">
+                            <ImageView fitHeight="50" fitWidth="50" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/icon.png"/>
+                                </image>
+                            </ImageView>
+                            <Label text="PeliSeries" styleClass="titulo-app"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Button fx:id="botonPeliculas" text="Películas" styleClass="boton-nav" onAction="#irAPeliculas"/>
+                            <Button fx:id="botonSeries" text="Series" styleClass="boton-nav" onAction="#irASeries"/>
+                        </HBox>
+                    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED">
+            <VBox styleClass="contenido-principal">
+                <Label text="Películas destacadas" styleClass="seccion-titulo"/>
+                <!-- Cambiar HBox por FlowPane para películas -->
+                <FlowPane fx:id="peliculasContainer" styleClass="carousel"
+                          prefWrapLength="1200" hgap="20" vgap="20"/>
+
+                <!-- PANEL DE DETALLES DESPLEGABLE -->
+                <VBox fx:id="panelDetalles" visible="false" managed="false" spacing="10" styleClass="detalle-pelicula">
+                    <Label fx:id="detalleTitulo" styleClass="detalle-titulo"/>
+                    <Label fx:id="detalleDirector"/>
+                    <Label fx:id="detalleDuracion"/>
+                    <Label fx:id="detalleValoracion"/>
+                    <Label fx:id="detalleSinopsis" wrapText="true"/>
+                    <Label fx:id="detalleDescarga"/>
+                </VBox>
+                <!-- FIN PANEL DE DETALLES -->
+
+                <Label text="Series populares" styleClass="seccion-titulo"/>
+                <!-- Cambiar HBox por FlowPane para series -->
+                <FlowPane fx:id="seriesContainer" styleClass="carousel"
+                          prefWrapLength="1200" hgap="20" vgap="20"/>
+
+                <VBox fx:id="panelDetallesSerie" visible="false" managed="false" spacing="10" styleClass="detalle-pelicula">
+                    <Label fx:id="detalleTituloSerie" styleClass="detalle-titulo"/>
+                    <Label fx:id="detalleCreadorSerie"/>
+                    <Label fx:id="detalleTemporadasSerie"/>
+                    <Label fx:id="detalleValoracionSerie"/>
+                    <Label fx:id="detalleSinopsisSerie"/>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+                </BorderPane>

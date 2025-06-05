@@ -1,0 +1,44 @@
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ejercicio.controllers.PeliculasCOntroller">
+    <TableView fx:id="tablaPeliculas" styleClass="tabla-moderna">
+        <columns>
+            <TableColumn text="id" prefWidth="80">
+                <cellValueFactory><PropertyValueFactory property="idVideo"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Título" prefWidth="200">
+                <cellValueFactory><PropertyValueFactory property="titulo"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Director" prefWidth="150">
+                <cellValueFactory><PropertyValueFactory property="director"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Valoración" prefWidth="100">
+                <cellValueFactory><PropertyValueFactory property="valoracion"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="sinopsis" prefWidth="300">
+                <cellValueFactory><PropertyValueFactory property="sinopsis"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="imagen" prefWidth="200">
+                <cellValueFactory><PropertyValueFactory property="imagen"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Duración" prefWidth="200">
+                <cellValueFactory><PropertyValueFactory property="duracion"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Descarga" prefWidth="200">
+                <cellValueFactory><PropertyValueFactory property="descarga"/></cellValueFactory>
+            </TableColumn>
+
+        </columns>
+    </TableView>
+
+    <HBox styleClass="botonera">
+        <Button text="Nueva Película" onAction="#mostrarFormularioCrear" styleClass="boton-accion"/>
+        <Button fx:id="editarButton" text="Editar" onAction="#mostrarFormularioEditar" styleClass="boton-accion"/>
+        <Button fx:id="eliminarButton" text="Eliminar" onAction="#eliminarPelicula" styleClass="boton-accion boton-eliminar"/>
+
+    </HBox>
+</VBox>

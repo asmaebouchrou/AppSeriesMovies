@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<DialogPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ejercicio.controllers.DialogControllers.SerieDialogController"
+            stylesheets="@../../css/modern.css">
+
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label text="Título:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="tituloField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Director:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="directorField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Sinopsis:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextArea fx:id="sinopsisArea" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Valoración:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ChoiceBox fx:id="valoracionBox" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Duración (min):" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="duracionField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ejercicio.controllers.SerieController">
+
+    <top>
+        <HBox styleClass="header">
+            <Button text="Volver" onAction="#volverAPrincipal" styleClass="boton-nav"/>
+            <Label text="Gestión de Series" styleClass="titulo-seccion"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Nueva Serie" onAction="#mostrarFormularioCrearSerie" styleClass="boton-accion"/>
+        </HBox>
+    </top>
+
+    <center>
+        <SplitPane dividerPositions="0.3" orientation="VERTICAL">
+            <!-- Panel superior: Lista de series -->
+            <TableView fx:id="tablaSeries" styleClass="tabla-moderna">
+                <columns>
+                    <TableColumn fx:id="columnaTitulo" text="Título"/>
+                    <TableColumn fx:id="columnaSinopsis" text="Sinopsis"/>
+                    <TableColumn fx:id="columnaDuracion" text="Duración"/>
+                    <TableColumn fx:id="columnaNumeroTemporadas" text="Temporadas"/>
+                    <TableColumn fx:id="columnaImagen" text="Imagen"/>
+                    <TableColumn fx:id="columnaDescarga" text="Descarga"/>
+                </columns>
+            </TableView>
+
+
+            <!-- Panel inferior: Temporadas y capítulos de la serie seleccionada -->
+            <TitledPane text="Temporadas" fx:id="panelTemporadas" animated="false">
+                <VBox>
+                    <Accordion fx:id="acordionTemporadas" />
+                    <HBox styleClass="botonera-temporadas" spacing="10">
+                        <padding>
+                            <Insets top="10" right="10" bottom="10" left="10"/>
+                        </padding>
+                        <Button fx:id="botonAñadirTemporada" text="Añadir Temporada"
+                                onAction="#mostrarFormularioTemporada" styleClass="boton-accion"/>
+                    </HBox>
+                </VBox>
+            </TitledPane>
+        </SplitPane>
+    </center>
+
+    <bottom>
+        <HBox styleClass="botonera" spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button fx:id="botonEditarSerie" text="Editar Serie" onAction="#mostrarFormularioEditarSerie"
+                    styleClass="boton-accion"/>
+            <Button fx:id="botonEliminarSerie" text="Eliminar Serie" onAction="#eliminarSerie"
+                    styleClass="boton-accion boton-eliminar"/>
+        </HBox>
+    </bottom>
+</BorderPane>
