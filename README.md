@@ -2,7 +2,7 @@
 
 ## Descripción
 
-**AppSeriesMovies** es una aplicación de escritorio desarrollada en Java utilizando JavaFX, que permite gestionar y visualizar información sobre películas y series. El usuario puede agregar, visualizar, editar y eliminar tanto películas como series, incluyendo temporadas y capítulos para estas últimas. La interfaz es moderna y dinámica, orientada al manejo fácil de contenidos multimedia.
+**AppSeriesMovies** es una aplicación de escritorio desarrollada en Java utilizando JavaFX, que permite gestionar y visualizar información sobre películas y series. El usuario puede agregar, visualizar, editar y eliminar tanto películas como series, incluyendo temporadas y capítulos para estas últimas. Interfaz orientada al manejo fácil de contenidos multimedia.
 
 ## Características principales
 
