@@ -49,16 +49,3 @@ Escritorio/AppSeriesMovies/
 2. Abre el proyecto en tu IDE Java compatible (por ejemplo, IntelliJ o Eclipse).
 3. Asegúrate de tener configuradas las dependencias de JavaFX y SQLite.
 4. Ejecuta la clase `org.example.appseriesmovies.MainApp` para iniciar la aplicación.
-
-## Capturas de pantalla
-
-![image1](image1)
-![image2](image2)
-
-## Créditos
-
-Desarrollado en el contexto de la asignatura de Programación (1º DAM)
-
-## Licencia
-
-MIT License
